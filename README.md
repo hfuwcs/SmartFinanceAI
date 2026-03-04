@@ -1,10 +1,5 @@
 # SmartFinanceAI
 
-
-
-
-# SmartFinanceAI
-
 ## Overview
 SmartFinanceAI is a comprehensive, AI-enhanced personal finance and wealth management platform. The system is designed to automate transaction categorization, manage multi-currency accounts, and provide intelligent financial insights using Retrieval-Augmented Generation (RAG). 
 
