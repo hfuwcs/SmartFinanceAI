@@ -29,7 +29,7 @@ builder.Services.AddOpenApi(options =>
             In = ParameterLocation.Header,
             Scheme = "bearer",
             BearerFormat = "JWT",
-            Description = "Nhập 'Bearer [khoảng trắng] {token}'"
+            Description = "Nhập '{token}'"
         };
         document.Components ??= new OpenApiComponents(); // Ensure Components is not null
         document.Components.SecuritySchemes.Add("Bearer", scheme);
@@ -59,7 +59,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole<Guid>>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
-builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 // JWT Authentication configuration
 builder.Services.AddAuthentication(options =>

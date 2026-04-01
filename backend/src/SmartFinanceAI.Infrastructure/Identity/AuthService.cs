@@ -9,7 +9,7 @@ using System.Text;
 
 namespace SmartFinanceAI.Infrastructure.Identity;
 
-public class AuthService
+public class AuthService: IAuthService
 {
     private readonly UserManager<ApplicationUser> _userManager;
     private readonly IConfiguration _config;
